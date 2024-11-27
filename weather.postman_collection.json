@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "f8ae6800-e47e-4be7-8d0b-8eb3ed50d85d",
+		"name": "weather",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21198614"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/weather/10001/aaa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/weather/10001/aaa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"weather",
+						"10001",
+						"aaa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "history",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/weather/history?postalCode=90210&user=manish1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"weather",
+						"history"
+					],
+					"query": [
+						{
+							"key": "postalCode",
+							"value": "90210"
+						},
+						{
+							"key": "user",
+							"value": "manish1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "history-postalcode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/weather/history/postalcode?postalCode=90210",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"weather",
+						"history",
+						"postalcode"
+					],
+					"query": [
+						{
+							"key": "postalCode",
+							"value": "90210"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "history-user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/weather/history/user?user=manish11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"weather",
+						"history",
+						"user"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "manish11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-activate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"manish2\", \"email\":\"a@a.com\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/activate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"activate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-deactivate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"manish1\", \"email\":\"a@a.com\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/deactivate/manish222",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"deactivate",
+						"manish222"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

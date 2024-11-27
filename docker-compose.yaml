@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - API_KEY=<replace your key here>
+      - DB_PORT=5433
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_NAME=weatherdb
+      - DB_HOST=host.docker.internal  # Use host.docker.internal to connect to PostgreSQL running on the host
+    networks:
+      - app_network
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: weatherdb
+    ports:
+      - "5433:5432"
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
