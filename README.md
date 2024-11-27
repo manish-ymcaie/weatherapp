@@ -1,7 +1,7 @@
 # Prerequisites are maven and jdk 17.
 # Steps to use this weatherapp are as below:
 1) Import the project in you IDE(Eclipse) as a maven project after clonig it from below git repo:
-
+https://github.com/manish-ymcaie/weatherapp
 2) Create postgres db named weatherdb on you local postgres server running on port 5432 with user and password as "postgres". If you want different config for database please edit the application.properties.
 Now, copy the contents of db.sql from src/main/resource folder and run against you database.
 
