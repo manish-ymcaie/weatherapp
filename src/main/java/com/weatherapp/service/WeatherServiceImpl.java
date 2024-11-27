@@ -56,7 +56,7 @@ public class WeatherServiceImpl implements WeatherService {
 
 			return new WeatherResponseDto(postalCode, weatherDescription, temperature);
 		} catch (Exception e) {
-			throw new RuntimeException("Failed to fetch weather data.");
+			throw new RuntimeException("Failed to fetch weather data."+e.getMessage());
 		}
 	}
 

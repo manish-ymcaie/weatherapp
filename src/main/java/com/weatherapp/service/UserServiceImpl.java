@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService {
 			user.setId(userEntity.getId());
 			return user;
 		} catch (Exception e) {
-			throw new RuntimeException("Failed to save user.");
+			throw new RuntimeException("Failed to save user."+ e.getMessage());
 		}
 
 	}
@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService {
 			}
 
 		} catch (Exception e) {
-			throw new RuntimeException("Failed to deactivate user.");
+			throw new RuntimeException("Failed to deactivate user."+ e.getMessage());
 
 		}
 	}

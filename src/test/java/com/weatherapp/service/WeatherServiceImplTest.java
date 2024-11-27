@@ -108,7 +108,7 @@ class WeatherServiceImplTest {
         // Act & Assert
         RuntimeException exception = assertThrows(RuntimeException.class, () ->
                 weatherService.fetchWeather(postalCode, user));
-        assertEquals("Failed to fetch weather data.", exception.getMessage());
+        assertEquals("Failed to fetch weather data.API error", exception.getMessage());
     }
 
     @Test

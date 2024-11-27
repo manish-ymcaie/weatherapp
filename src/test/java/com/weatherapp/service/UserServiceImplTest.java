@@ -76,7 +76,7 @@ class UserServiceImplTest {
             userService.activateUser(userDto);
         });
 
-        assertEquals("Failed to save user.", exception.getMessage());
+        assertEquals("Failed to save user.Database error", exception.getMessage());
         verify(userRepository, times(1)).save(any(User.class));
     }
 
@@ -105,7 +105,7 @@ class UserServiceImplTest {
             userService.deactivateUser(userName);
         });
 
-        assertEquals("Failed to deactivate user.", exception.getMessage());
+        assertEquals("Failed to deactivate user.Database error", exception.getMessage());
         verify(userRepository, times(1)).deactivateUser(userName);
     }
 
